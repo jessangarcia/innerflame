@@ -59,6 +59,21 @@ footer a {
     color: #880202;
 }
 /*hero styling*/
-section {
-    padding: 60px;
+.jumbo{
+    background-image: url("../images/flame-circle.jpg");
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(233, 42, 42, 0.333);
+    padding: 20px;
+    width: 500px;
+    border-radius: 25px;
+    text-align: center;
 }

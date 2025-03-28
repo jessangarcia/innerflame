@@ -43,10 +43,10 @@ document.querySelector('.lightboxClose').addEventListener('click', function (e) 
 });
 
 function closeLightbox() {
-    const lightboxCl = document.querySelector('.lightbox');
+    const lightbox = document.querySelector('.lightbox');
     const lightboxVideo = document.getElementById('lightboxvideo');
 
-    lightboxCl.style.display = 'none';
+    lightbox.style.display = 'none';
     lightboxVideo.pause();
 }
 

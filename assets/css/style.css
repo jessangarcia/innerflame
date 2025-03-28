@@ -21,13 +21,15 @@ body {
 }
 .navbar .navbar-brand{
     color: #97251f !important;
-    text-shadow: 0 0 5px #000000,
-    0 0 5px #000000; 
+    text-shadow: 0 0 5px #298888,
+    0 0 5px #298888; 
+    font-size: 25px;
 }
 .navbar .nav-link {
     color: #97251f !important;
-    text-shadow: 0 0 3px #000000,
-    0 0 2px #000000; 
+    text-shadow: 0 0 3px #298888,
+    0 0 2px #298888; 
+    font-size: 25px;
 }
 
 .nav-link {
@@ -65,8 +67,8 @@ footer{
     left: 0;
     bottom: 0;
     color: #97251f;
-    text-shadow: 0 0 3px #000000,
-    0 0 2px #000000; 
+    text-shadow: 0 0 3px #36adad,
+    0 0 2px #36adad; 
 }
 
 .jumbo{
@@ -98,19 +100,19 @@ footer{
     padding: 20px;
 }
 
-.gallery-item {
+.galleryitem {
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover {
+.galleryitem:hover {
     transform: scale(1.05);
 }
 
-.gallery-item img, 
-.gallery-item video {
+.galleryitem img, 
+.galleryitem video {
     width: 100%;
     height: 250px;
     object-fit: cover;
@@ -128,7 +130,7 @@ footer{
     display: none;
 }
 
-.gallery-item.video .play-icon {
+.galleryitem.video .play-icon {
     display: block;
 }
 
@@ -165,4 +167,32 @@ footer{
     color: white;
     font-size: 30px;
     cursor: pointer;
+}
+.bios{
+    margin: 30px;
+}
+img.displaySlide{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+.slider button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 10px 15px;
+    background-color: #00000071;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.prev{
+    left: 0;
+}
+.next{
+    right: 0;
+}
+@keyframes fade{
+    from{opacity: .5;}
+    to {opacity: 1;}
 }

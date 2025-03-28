@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
             alert('Thank you for your message! We will get back to you soon.');
             contactForm.reset();
@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', function() {
+document.querySelectorAll('.galleryitem').forEach(item => {
+    item.addEventListener('click', function () {
         const lightbox = document.querySelector('.lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxVideo = document.getElementById('lightbox-video');
-        
+        const lightboxImg = document.getElementById('lightboximg');
+        const lightboxVideo = document.getElementById('lightboxvideo');
+
         // Reset previous media
         lightboxImg.style.display = 'none';
         lightboxVideo.style.display = 'none';
@@ -38,14 +38,51 @@ document.querySelectorAll('.gallery-item').forEach(item => {
 
 // Close lightbox
 document.querySelector('.close-btn').addEventListener('click', closeLightbox);
-document.querySelector('.lightbox').addEventListener('click', function(e) {
+document.querySelector('.lightboxClose').addEventListener('click', function (e) {
     if (e.target === this) closeLightbox();
 });
 
 function closeLightbox() {
-    const lightbox = document.querySelector('.lightbox');
-    const lightboxVideo = document.getElementById('lightbox-video');
-    
-    lightbox.style.display = 'none';
+    const lightboxCl = document.querySelector('.lightbox');
+    const lightboxVideo = document.getElementById('lightboxvideo');
+
+    lightboxCl.style.display = 'none';
     lightboxVideo.pause();
+}
+
+const slides = document.querySelectorAll(".lightbox img");
+let slideIndex = 0;
+let intervalId = null;
+const imgs = document.getElementById('galleryphoto');
+
+document.addEventListener("DOMContentLoaded", initializeSlider);
+
+function initializeSlider() {
+    if (slides.length > 0) {
+        slides[slideIndex].classList.add("displaySlide")
+        intervalId = setInterval(nextSlide, 5000);
+    }
+}
+function showSlide(index) {
+
+    if(index >= slides.length){
+        slideIndex = 0;
+    }
+    else if(index < 0){
+        slideIndex = slides.length - 1;
+    }
+
+    slides.forEach(imgs => {
+        imgs.classList.remove("displaySlide");
+    });
+    slides[slideIndex].classList.add("displaySlide");
+}
+function prevSlide() {
+    clearInterval(intervalId)
+    slideIndex--;
+    showSlide(slideIndex);
+}
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
 }

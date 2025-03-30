@@ -22,15 +22,18 @@ body {
 }
 .navbar .navbar-brand{
     color: #97251f !important;
-    text-shadow: 0 0 5px #298888,
-    0 0 5px #298888; 
-    font-size: 25px;
+    text-shadow: 0 0 9px #1a6767,
+    0 0 9px #1a6767; 
+    font-size: 23px;
 }
 .navbar .nav-link {
     color: #97251f !important;
-    text-shadow: 0 0 3px #298888,
-    0 0 2px #298888; 
-    font-size: 25px;
+    text-shadow: 0 0 8px #000000,
+    0 0 8px #000000; 
+    font-size: 20px;
+}
+#otherNav{
+    background: #000;
 }
 
 .nav-link {
@@ -41,7 +44,7 @@ body {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
+    height: 3px;
     bottom: 0;
     left: 0;
     background-color: currentColor;
@@ -49,7 +52,7 @@ body {
 }
   
 .nav-link:hover::after {
-    width: 100%;
+    width: 95%;
 }
 
 .nav-item{
@@ -62,13 +65,20 @@ body {
 }
 
 footer{
-    background: #0000000f;
+    background: #00000000;
+    padding: 5px 5px;
+    left: 0;
+    bottom: 0;
+    color: #97251f;
+    text-shadow: 0 0 9px #000000,
+    0 0 9px #000000; 
+}
+#otherFooter{
+    background: #000000;
     padding: 15px 10px;
     left: 0;
     bottom: 0;
     color: #97251f;
-    text-shadow: 0 0 3px #36adad,
-    0 0 2px #36adad; 
 }
 
 .jumbo{
@@ -186,7 +196,7 @@ img.displaySlide{
     background-color: #00000071;
     color: white;
     border: none;
-    cursor: pointer;
+    cursor: default;
 }
 .prev{
     left: 0;
@@ -206,4 +216,48 @@ img.displaySlide{
     padding: 20px;
     margin-bottom: 100px;
     padding-bottom: 50px;
+}
+
+/* bio page css*/
+#bios{
+    font-size: 40px;
+    text-shadow: 0 0 10px #97251f,
+    0 0 10px #97251f; 
+}
+
+#performers {
+    text-align: center;
+    margin-bottom: 45px;
+    padding-bottom: 15px;
+}
+.performer {
+    width: 1200px;
+    margin: 0 auto 30px auto;
+    background: #000;
+    color: #97251f;
+    overflow: auto;
+    border-radius: 20px;
+}
+.performer img{
+    width: 35%;
+    float: left;
+}
+.performer-bio{
+    padding: 60px;
+    float: left;
+    width: 65%;
+    cursor: default;
+}
+.performer-bio h3 {
+    font-size: 45px;
+    margin-bottom: 25px;
+    text-decoration: underline;
+    text-shadow: 0 0 9px #1a6767,
+    0 0 9px #1a6767; 
+}
+.performer-bio p {
+    font-size: 18px;
+    line-height: 1.3;
+    text-shadow: 0 0 3px #1a6767,
+    0 0 3px #1a6767; 
 }

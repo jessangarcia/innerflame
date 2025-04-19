@@ -40,22 +40,22 @@
 
     <div class="container mt-5">
         <h1 class="mb-4">Contact Us</h1>
-        <form id="contactForm">
+        <form action="mail.php" method="POST" id="contactForm">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
+                <input type="text" class="form-control" name="name" id="name" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
+                <input type="email" class="form-control" name="email" id="email" required>
             </div>
             <div class="mb-3">
                 <label for="eventDate" class="form-label">Event Date</label>
-                <input type="date" class="form-control" id="eventDate" required>
+                <input type="date" class="form-control" name="date" id="eventDate" required>
             </div>
             <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3" required></textarea>
+                <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
             </div>
             <button type="submit" class="btn btn-dark btn-outline-light">Send Message</button>
         </form>

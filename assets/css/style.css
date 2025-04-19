@@ -22,8 +22,8 @@ body {
 }
 .navbar .navbar-brand{
     color: #97251f !important;
-    text-shadow: 0 0 9px #1a6767,
-    0 0 9px #1a6767; 
+    text-shadow: 0 0 9px #30dbe1,
+    0 0 9px #30dbe1; 
     font-size: 23px;
 }
 .navbar .nav-link {
@@ -49,10 +49,12 @@ body {
     left: 0;
     background-color: currentColor;
     transition: width 0.1s ease;
+    color: #30dbe1;
 }
   
 .nav-link:hover::after {
     width: 95%;
+    color: #30dbe1;
 }
 
 .nav-item{
@@ -102,6 +104,10 @@ footer{
     0 0 2px #000000; 
     cursor: default;
     color: #97251f;
+}
+.jumbo-content h2{
+    text-shadow: 0 0 3px #30dbe1,
+    0 0 2px #30dbe1; 
 }
 .gallery {
     display: grid;
@@ -252,12 +258,32 @@ img.displaySlide{
     font-size: 45px;
     margin-bottom: 25px;
     text-decoration: underline;
-    text-shadow: 0 0 9px #1a6767,
-    0 0 9px #1a6767; 
+    text-shadow: 0 0 9px #30dbe1,
+    0 0 9px #30dbe1; 
 }
 .performer-bio p {
     font-size: 18px;
     line-height: 1.3;
     text-shadow: 0 0 3px #1a6767,
     0 0 3px #1a6767; 
+}
+
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    color: #30dbe1; /* Instagram brand color */
+    text-decoration: none;
+    margin: 10px 0;
+    transition: color 0.3s;
+    text-shadow: 0 0 10px #000,
+    0 0 10px #000; 
+}
+
+.instagram-link:hover {
+    color: #2398ad; /* Instagram gradient color */
+}
+
+.instagram-link i {
+    font-size: 1.5rem;
+    margin-right: 8px;
 }

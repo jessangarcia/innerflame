@@ -71,10 +71,12 @@ footer{
     padding: 5px 5px;
     left: 0;
     bottom: 0;
+    padding-bottom: 60px;
     color: #97251f;
     text-shadow: 0 0 9px #000000,
     0 0 9px #000000; 
 }
+
 #otherFooter{
     background: #000000;
     padding: 15px 10px;
